@@ -46,13 +46,13 @@ const companySchema = new Schema({
     products: [
         {
             type: Schema.Types.ObjectId,
-            ref: 'Products',
+            ref: 'Product',
         }
     ],
     purchaseOrders: [
         {
             type: Schema.Types.ObjectId,
-            ref: 'PurchaseOrders',
+            ref: 'PurchaseOrder',
         },
     ],
     userType: {
@@ -81,6 +81,6 @@ companySchema.methods.isCorrectPassword = async function (password) {
 };
 
 
-const User = model('Company', companySchema);
+const Company = model('Company', companySchema);
 
 module.exports = Company;

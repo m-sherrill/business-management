@@ -2,7 +2,7 @@ const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
 const dateFormat = require('../utils/dateFormat');
 
-const trackingSchema = new Schema({
+const purchaseOrderSchema = new Schema({
     firstName: {
         type: String,
         required: true,
@@ -45,6 +45,6 @@ const trackingSchema = new Schema({
 
 
 
-const Tracking = model('Tracking', trackingSchema);
+const PurchaseOrder = model('PurchaseOrder', purchaseOrderSchema);
 
-module.exports = Tracking;
+module.exports = PurchaseOrder;
